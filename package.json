@@ -1,0 +1,42 @@
+{
+  "name": "expressive-code-plugin-data-lang",
+  "version": "0.1.0",
+  "description": "Plugin to inject a data-lang attribute for Expressive Code, a text marking & annotation engine for presenting source code on the web.",
+  "keywords": [
+    "expressive-code",
+    "expressive-code-plugin",
+    "psuedo-element",
+    "data-lang"
+  ],
+  "author": "Tiger Oakes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NotWoods/expressive-code-plugin-data-lang.git"
+  },
+  "type": "module",
+  "main": "./src/plugin.js",
+  "module": "./src/plugin.js",
+  "exports": {
+    "types": "./types/plugin.d.ts",
+    "default": "./src/plugin.js"
+  },
+  "types": "./types/plugin.d.ts",
+  "files": [
+    "src",
+    "types"
+  ],
+  "scripts": {
+    "build": "tsc -p src/jsconfig.json",
+    "test": "vitest"
+  },
+  "peerDependencies": {
+    "@expressive-code/core": "^0.33.0"
+  },
+  "devDependencies": {
+    "@expressive-code/core": "^0.33.5",
+    "@expressive-code/plugin-frames": "^0.33.5",
+    "typescript": "^5.4.3",
+    "vitest": "^1.4.0"
+  }
+}
