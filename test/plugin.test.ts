@@ -1,7 +1,7 @@
 import { ExpressiveCodeEngine } from "@expressive-code/core";
+import { pluginFrames } from "@expressive-code/plugin-frames";
 import { test } from "vitest";
 import { pluginDataLang } from "../";
-import { pluginFrames } from "@expressive-code/plugin-frames";
 
 test("adds data-lang attribute to code blocks", async ({ expect }) => {
   const engine = new ExpressiveCodeEngine({
@@ -14,8 +14,8 @@ test("adds data-lang attribute to code blocks", async ({ expect }) => {
 
   expect(result.renderedGroupAst.children).toHaveLength(1);
   const frame = result.renderedGroupAst.children[0];
-  if (frame.type !== 'element') {
-    throw new Error('invalid frame type')
+  if (frame.type !== "element") {
+    throw new Error("invalid frame type");
   }
 
   expect(frame.tagName).toBe("pre");
@@ -33,8 +33,8 @@ test("adds data-lang attribute to frame", async ({ expect }) => {
 
   expect(result.renderedGroupAst.children).toHaveLength(1);
   const frame = result.renderedGroupAst.children[0];
-  if (frame.type !== 'element') {
-    throw new Error('invalid frame type')
+  if (frame.type !== "element") {
+    throw new Error("invalid frame type");
   }
 
   expect(frame.tagName).toBe("figure");
