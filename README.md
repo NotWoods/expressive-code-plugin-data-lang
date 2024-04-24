@@ -1,4 +1,4 @@
-# @expressive-code/plugin-collapsible-sections
+# expressive-code-plugin-data-lang
 
 A third-party plugin for [Expressive Code](https://expressive-code.com/), an engine for presenting source code on the web.
 
